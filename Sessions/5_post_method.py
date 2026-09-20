@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
-app = FastAPI
+app = FastAPI()
+
 @app.post("/create-user")
 def create_user(name:str, age:int):   # isme url query param ki tarah aata hai
     return {                          
