@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-class Address(BaseModel):
+class Address(BaseModel):     # Nested Model
     city: str
     pincode: int
 
