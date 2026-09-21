@@ -31,7 +31,7 @@ class Todo(Base):
     completed = Column(String)
     
 # Table Create
-Base.metadata.createall(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 # Dependency(DB Session Provide Karega)
 def get_db():
