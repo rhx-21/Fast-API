@@ -2,7 +2,7 @@ from fastapi import FastAPI,Depends,Header,HTTPException
 
 app = FastAPI()
 
-def verify_token(token:str = Header(None)):
+def verify_token(token:str = Header(None)):      # Token ko ham Header m rakh kar bhejte hai normal json m nahi bhej sakte kyuki secure nahi hota
     if token != "mytoken":
         raise HTTPException(
             status_code=401,
